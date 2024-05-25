@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --bgclr:#110933;
+    --buttonsClr:#d0d1cf;
+    --calcBg:#241a3b;
+    --calcSecondClr:#d0b322;
+    --font:'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2f214e;
+    color: var(--buttonsClr);
+    min-height: 100vh;
+    display: grid;
+    place-items: center ;
+}
+
+
+
+.calculator{
+    background-color: var(--calcBg);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1.3rem;
+    width: clamp(20rem, 30vw, 32rem);
+    min-height: 33rem;
+    border-radius: .4rem;
+    gap: .3rem;
+    box-shadow: 0px 0px 10px var(--calcSecondClr)
+}
+
+
+.calculator > div{
+    background-color: var(--buttonsClr);
+    border-radius: .4rem;
+    outline: none;
+    color: var(--calcBg);
+    font-family: monospace;
+    overflow: auto;
+    font-size: clamp(.7rem, 1.3rem, 2.3rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border: none;
+    text-align: right;
+    padding: .5rem;
+}
+
+.btn{
+    background-color: var(--calcSecondClr);
+    border-radius: .4rem;
+    text-align: center;
+    color: var(--calcBg);
+    border: none;
+    font-weight: bold;
+    font-size: clamp(1rem, 2rem, 4rem);
+}
+.btn:hover{
+   background-color: #1c190f;
+    box-shadow: 0px 0px 10px var(--calcSecondClr), 0px 0px 10px var(--buttonsClr);
+    color: var(--buttonsClr);
+    
+}
+
+#display{
+    grid-column: span 4 ;
+}
+
+#equal{
+    grid-row: span 2;
+}
+#equal:hover{
+    grid-row: span 2;
+    background-color: rgb(20, 162, 20);
+}
+
+#zero{
+    grid-column: span 2
+}
+
+#delete:hover{
+    background-color: rgb(207, 14, 14);
+    
+}
+
+#clear:hover{
+    background-color: rgb(207, 14, 14);
+}
+
+#copyright {
+    text-decoration: none;
+    color: var(--buttonsClr);
+}
+
